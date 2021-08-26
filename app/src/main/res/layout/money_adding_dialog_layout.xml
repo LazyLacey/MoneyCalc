@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageButton
+            android:id="@+id/IBPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorGrey">
+
+        </ImageButton>
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/IBPlus"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/IBMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/editTextNumber"
+            android:src="@drawable/remove"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorGrey">
+
+        </ImageButton>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

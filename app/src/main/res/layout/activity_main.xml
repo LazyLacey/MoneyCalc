@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/circle_shape"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="65"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="На сегодня:"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/today_money__wrapper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/today_money__wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="@+id/progressBar"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:onClick="changeTodayMoney">
+
+
+                <TextView
+                    android:id="@+id/today_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="700.00"
+                    android:textSize="50dp">
+
+                </TextView>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Копилочьки :)"
+            android:textSize="20dp"
+            android:padding="5dp">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#E8F5E9"
+            android:onClick="changePlayMoney">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="На развлекухи"
+                    android:textSize="15dp"
+                    android:paddingLeft="20dp"
+                    android:layout_centerVertical="true">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/play_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:text="20000.00"
+                    android:textSize="20dp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#F9FBE7"
+            android:onClick="changeVacationMoney">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="На отдых"
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/vacation_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="10dp"
+                android:text="70000.00"
+                android:textSize="20dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#FFF3E0"
+            android:onClick="changeSalaryMoney">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Зряплата"
+                android:textSize="15dp"
+                android:paddingLeft="20dp"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/salary_money__days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/salary_money"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="5 дней"
+                android:textStyle="italic"
+                android:textColor="#6A6A6A"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/salary_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="10dp"
+                android:text="15000"
+                android:textSize="20dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#E57373"
+        android:layout_marginTop="20dp"
+        android:onClick="changeMomMoney">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мамины денежки"
+                android:textSize="20dp"
+                android:paddingHorizontal="5dp"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mom_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="10dp"
+                android:text="190000.00"
+                android:textSize="20dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#4FC3F7"
+            android:layout_marginTop="20dp"
+            android:onClick="changePercentMoney">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="5dp"
+                    android:text="Процентики"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/percent_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingHorizontal="10dp"
+                    android:text="1735.00"
+                    android:textSize="20dp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/tech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Всего на карте"
+                android:textSize="20dp"
+                android:paddingHorizontal="5dp"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/summary_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="10dp"
+                android:text="295000.00"
+                android:textSize="20dp"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+        </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tech">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:textStyle="italic"
+                        android:text="Не влезло"
+                        android:textSize="13dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/no_space_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:text="295000.00"
+                        android:textSize="13dp">
+
+                    </TextView>
+                </RelativeLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

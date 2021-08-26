@@ -1,0 +1,68 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Зарплата">
+
+        <EditTextPreference
+            app:key="salary_money_summary"
+            android:inputType="number"
+            app:defaultValue="30000"
+            app:title="Зарплата целиком"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="salary_money_little_half"
+            android:inputType="number"
+            app:defaultValue="14598"
+            app:title="Меньшая часть зарплаты"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="salary_money_big_half"
+            android:inputType="number"
+            app:defaultValue="15402"
+            app:title="Большая часть зарплаты"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Копилки">
+
+        <EditTextPreference
+            app:key="vacation_money_from_little_half"
+            android:inputType="number"
+            app:defaultValue="2000"
+            app:title="Сумма на отдых с меньшей половины"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="vacation_money_from_big_half"
+            android:inputType="number"
+            app:defaultValue="3000"
+            app:title="Сумма на отдых с большей половины"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="play_money_from_salary"
+            android:inputType="number"
+            app:defaultValue="4000"
+            app:title="Сумма на развлекухи с з/п в целом"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Суммы">
+
+        <EditTextPreference
+            app:key="daily_money"
+            android:inputType="numberDecimal"
+            app:defaultValue="700"
+            app:title="Деньги на день"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="money_with_profit"
+            android:inputType="number"
+            app:defaultValue="300000"
+            app:title="Сумма для процентов"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
